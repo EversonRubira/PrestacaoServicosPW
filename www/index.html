@@ -9,7 +9,7 @@
     <script src="scripts/information.js"></script>
     <script src="/scripts/main.js"></script>
 </head>
-<body>    
+<body>
     <nav>
         <ul class="menu">
             <li><a id="menuHome" href="javascript: info.showHome();">Home</a></li>
@@ -25,20 +25,31 @@
                 <form action="javascript: info.addPerson();">
                     <input id="personId" type="hidden" />
                     <div>
-                        <label for="personName">Name</label>
-                        <input id="personName" type="text" />
+                        <label for="userName">Name</label>
+                        <input id="userName" type="text" />
                     </div>
                     <div>
-                        <label for="personDate">Birth Date</label>
-                        <input id="personDate" type="date" />
+                        <label for="userEmail">E-mail</label>
+                        <input id="userEmail" type="email" />
                     </div>
                     <div>
-                        <label for="personCountry">Country</label>
-                        <select id="personCountry"></select>
+                        <label for="userPhone">Phone Number</label>
+                        <input id="userPhone" type="tel" />
                     </div>
                     <div>
-                        <button type="reset">clear</button>
-                        <button type="submit">add</button>
+                        <label for="userPassword">Password</label>
+                        <input id="userPassword" type="password" />
+                    </div>
+                    <div>
+                        <label for="userType">Type</label>
+                        <select id="userType">
+                            <option value="ADMIN">Admin</option>
+                            <option value="USER">User</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="reset">Clear</button>
+                        <button type="submit">Add</button>
                     </div>
                 </form>
             </div>

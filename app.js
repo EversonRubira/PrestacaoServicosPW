@@ -6,19 +6,14 @@ const app =  express();
 app.use(express.static("www"));//arquivos estaticos
 app.use(bodyParser.urlencoded({ extended: true }));//para fazer a interpretacao do body
 
-// People
-app.get("/person", requestHandlers.getPeople);
-app.get("/person/:id", requestHandlers.getPerson);
-app.post("/person", requestHandlers.createPerson);
-app.put("/person/:id", requestHandlers.updatePerson);
-app.delete("/person/:id", requestHandlers.deletePerson);
+// Coletar valores dos inputs
+const name = document.getElementById('userName').value;
+const email = document.getElementById('userEmail').value;
+const phone = document.getElementById('userPhone').value;
+const password = document.getElementById('userPassword').value;
+const type = document.getElementById('userType').value;
 
-// Countries
-app.get("/country", requestHandlers.getCountries);
-app.get("/country/:id", requestHandlers.getCountry);
-app.post("/country", requestHandlers.createCountry);
-app.put("/country/:id", requestHandlers.updateCountry);
-app.delete("/country/:id", requestHandlers.deleteCountry);
+
 
 app.listen(8081, function () {
     console.log("Server running at http://localhost:8081");
